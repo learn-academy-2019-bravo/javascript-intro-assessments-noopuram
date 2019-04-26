@@ -92,13 +92,18 @@ while (i < mantra.length) {
   var toonimals = [ {name: 'Itchy', animal: 'mouse'}, {name: 'Stimpy', animal: 'cat'}, {name: 'Daffy', animal: 'duck'}, {name: 'Scratchy', animal: 'cat'}, {name: 'Ren', animal: 'dog'}, {name: 'Felix', animal: 'cat'}]
 //
 // // 8. Write a function that takes an array like toonimals and returns an array with only the toons that are cats.
-function saveCats(arr) {
-  for(let i=0; i<arr.length; i++) {
-    var newArr = []
-    if (arr.animal==='cat') {
-      newArr.push(arr[i])
-    }
-  } return newArr
+// function saveCats(arr) {
+//     var newArr = []
+  // for(let i=0; i<arr.length; i++) {
+// var newArr = []
+let catsOnly = toonimals.filter(function(obj){
+  return obj.animal ==='cat'
+})
+    // if (arr.filter(value => value.animal==="cat")) {
+    //   newArr.push(arr[i])
+    //   return newArr
+    // }
+  // }
 }
 // var toonimals = [ {name: 'Itchy', animal: 'mouse'}, {name: 'Stimpy', animal: 'cat'}, {name: 'Daffy', animal: 'duck'}, {name: 'Scratchy', animal: 'cat'}, {name: 'Ren', animal: 'dog'}, {name: 'Felix', animal: 'cat'}]
-console.log(savaCats(toonimals));
+console.log(catsOnly);
